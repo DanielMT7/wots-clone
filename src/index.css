@@ -1,0 +1,32 @@
+@font-face {
+  font-family: myFontBlack;
+  src: url('./assets/fonts/black.ttf');
+}
+
+@font-face {
+  font-family: myFontLight;
+  src: url('./assets/fonts/light.otf');
+}
+
+@font-face {
+  font-family: myFontSuperLight;
+  src: url('./assets/fonts/superLight.ttf');
+}
+
+@font-face {
+  font-family: myFontFreeLight;
+  src: url('./assets/fonts/FreeSans.ttf');
+}
+
+@font-face {
+  font-family: myFontFreeBold;
+  src: url('./assets/fonts/FreeSansBold.otf');
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}

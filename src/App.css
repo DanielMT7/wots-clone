@@ -1,0 +1,8 @@
+body {
+  background-color: rgb(229, 229, 229);
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+}

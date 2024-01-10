@@ -1,0 +1,40 @@
+@font-face {
+  font-family: myFontBlack;
+  src: url('../../assets/fonts/black.ttf');
+}
+
+
+.navbar-container {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  height: 70px;
+  background-color: #fff;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+ul {
+  height: 100%;
+  width: 100%;
+  padding: 24px 25px;
+  box-shadow: 0 1.47px 11.04px rgba(0,0,0,.2)!important;
+  font-family: myFontBlack;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  align-items: center;
+}
+
+ul li {
+  font-size: 15px;
+}
+
+ul li img {
+  margin: 0 6px;
+  width: 28px;
+  height: 28px;
+}
