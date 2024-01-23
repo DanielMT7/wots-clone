@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import artists from '../../../data/cards-mocked'
 import ErrorPage from '../../ErrorPage/ErrorPage'
 
-import './Clothe.css'
+import styles from './Clothe.module.css'
 
 function Clothe() {
   const { id } = useParams()
@@ -43,28 +43,28 @@ function Clothe() {
   }
 
   return (
-    <div className="clothe">
-      <div className="clothe-card-container">
-        <div className="clothe-card-container-image">
+    <div className={styles.clothe}>
+      <div className={styles.clothe_card_container}>
+        <div className={styles.clothe_card_container_image}>
           <img src={image} alt="" />
         </div>
 
-        <div className="clothe-card-container-all-info">
-          <div className="clothe-card-container-info">
+        <div className={styles.clothe_card_container_all_info}>
+          <div className={styles.clothe_card_container_info}>
             <div className="">
               <h1>{brand}</h1>
               <h2>{clotheName}</h2>
             </div>
           </div>
-          <div className="clothe-card-container-price-info">
+          <div className={styles.clothe_card_container_price_info}>
             <div>
               ${price}{' '}
               {buyAt ? <span>{`from ${formatSiteName(buyAt)}`}</span> : null}
             </div>
-            <div className="button-container">
+            <div className={styles.button_container}>
               {buyAt ? (
                 <button
-                  className="price-button"
+                  className={styles.price_button}
                   onClick={() => handleClickBuy(buyAt)}
                 >
                   BUY AT {formatSiteName(buyAt).toUpperCase()}

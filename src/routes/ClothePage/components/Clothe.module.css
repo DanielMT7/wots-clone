@@ -4,7 +4,7 @@
   place-content: center;
 }
 
-.clothe-card-container {
+.clothe_card_container {
   background-color: #fff;
   width: 600px;
   height: 405px;
@@ -14,7 +14,7 @@
   overflow: hidden;
 }
 
-.clothe-card-container-image {
+.clothe_card_container_image {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,14 +22,14 @@
   height: 405px;
 }
 
-.clothe-card-container-image img {
+.clothe_card_container_image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   box-shadow: 0 0 0 1px rgba(0,0,0,.2)!important;
 }
 
-.clothe-card-container-info {
+.clothe_card_container_info {
   width: 300px;
   height: 60px;
   padding: 12px 24px;
@@ -37,7 +37,7 @@
   box-shadow: 0 1.47px 11.04px rgba(0,0,0,.2)!important;
 }
 
-.clothe-card-container-info h1 {
+.clothe_card_container_info h1 {
   font-family: myFontFreeBold;
   color: #000;
   font-size: 17px;
@@ -45,7 +45,7 @@
   line-height: 1;
 }
 
-.clothe-card-container-info h2 {
+.clothe_card_container_info h2 {
   font-family: myFontFreeLight;
   font-size: 15px;
   font-weight: 400;
@@ -55,23 +55,23 @@
   overflow: hidden;
 }
 
-.clothe-card-container-price-info {
+.clothe_card_container_price_info {
   font-family: myFontLight;
   padding: 10px 20px;
   height: 345px;
 }
 
-.clothe-card-container-price-info span {
+.clothe_card_container_price_info span {
   font-family: myFontFreeLight;
   color: #7a7a7a;
 }
 
-.button-container {
+.button_container {
   text-align: center;
   margin-top: 20px;
 }
 
-.price-button {
+.price_button {
   padding: 0 16px;
   width: 260px;
   height: 36px;
@@ -80,7 +80,7 @@
   border-radius: 4px;
 }
 
-.clothe-card-container-info-heart img{
+.clothe_card_container_info_heart img{
   width: 18px;
   height: 18px;
   object-fit: cover;
