@@ -1,11 +1,16 @@
 import React from 'react'
-import './ErrorPage.css'
+import styles from './ErrorPage.module.css'
+import errorImage from '../../assets/images/utils/errorImage.png'
+import Navbar from '../../components/Navbar/Navbar'
 
-function ErrorPage({ errorMessage }) {
+function ErrorPage() {
   return (
-    <div className="error-page">
-      <h1>{errorMessage ?? 'Error'}</h1>
-    </div>
+    <>
+      <Navbar />
+      <div className={styles.error}>
+        <img src={errorImage} alt="Error 404" />
+      </div>
+    </>
   )
 }
 

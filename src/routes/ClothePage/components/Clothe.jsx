@@ -22,7 +22,7 @@ function Clothe() {
   const item = getItemFromMock(id)
 
   if (!item) {
-    return <ErrorPage errorMessage={'Roupa não encontrada'} />
+    return <ErrorPage />
   }
 
   const { brand, clotheName, image, price, buyAt } = item
