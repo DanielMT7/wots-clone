@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './Navbar.css'
+import styles from './Navbar.module.css'
 import search from '../../assets/images/search.svg'
 import menu from '../../assets/images/menu.png'
 
 function Navbar() {
   return (
-    <div className="navbar-container">
+    <div className={styles.navbar_container}>
       <ul>
         <li>
           <img src={menu} alt="" />
