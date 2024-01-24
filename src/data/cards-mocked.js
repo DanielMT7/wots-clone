@@ -28,7 +28,7 @@ import derekJacket from '../assets/images/Derek/jacket.avif'
 
 const artists = [
   {
-    outfitImage: veigh,
+    outfitImage: [veigh, derek, tokio],
     profileImage: veighProfile,
     nickName: 'Veigh',
     date: 'October 1, 2023',
@@ -73,7 +73,7 @@ const artists = [
     ]
   },
   {
-    outfitImage: tokio,
+    outfitImage: [tokio, veigh, derek],
     profileImage: tokioProfile,
     nickName: 'Tokio DK',
     date: 'September 27, 2023',
@@ -116,7 +116,7 @@ const artists = [
     ]
   },
   {
-    outfitImage: derek,
+    outfitImage: [derek, veigh, tokio],
     profileImage: derekProfile,
     nickName: 'Derek',
     date: 'September 23, 2023',

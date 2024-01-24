@@ -11,12 +11,60 @@
 .card_image_container {
   width: 340px;
   max-height: 100%;
+  position: relative;
 }
 
-.card_image_container img {
+.main_image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(180deg);
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.arrow:hover {
+  opacity: 1;
+}
+
+.previous_arrow {
+  left: 0;
+  transform: scaleX(-1);
+}
+
+.next_arrow {
+  right: 0;
+}
+
+.image_bullets {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.image_bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.active_bullet {
+  opacity: 1;
+  transform: scale(1.5);
 }
 
 .profile_container {
