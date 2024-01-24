@@ -4,11 +4,10 @@ import App from './App.jsx'
 import Clothe from './routes/ClothePage/components/Clothe.jsx'
 import Home from './routes/Home/Home.jsx'
 import ErrorPage from './routes/ErrorPage/ErrorPage.jsx'
-import './index.css'
+import styles from './main.module.css'
 
 // 1 - Router Config
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-
 
 const router = createBrowserRouter([
   {
@@ -23,15 +22,14 @@ const router = createBrowserRouter([
       // nested routes
       {
         path: '/item/:id',
-        element: <Clothe />,
+        element: <Clothe />
       }
     ]
-  },
-  
+  }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>
 )

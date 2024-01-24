@@ -1,11 +1,11 @@
 import React from 'react'
-import './Card.css'
+import styles from './Card.module.css'
 import heart from '../../../../assets/images/coracao.png'
 import ClotheCard from '../ClotheCard/ClotheCard'
 
 function Card({ data }) {
   // get data from mocked object
-  const { outfitImage, profileImage, nickName, date, clothes} = data
+  const { outfitImage, profileImage, nickName, date, clothes } = data
 
   // Sum price values on clothes object
   let sum = clothes.reduce((accumulator, object) => {
@@ -13,30 +13,30 @@ function Card({ data }) {
   }, 0)
 
   return (
-    <div className="card-container">
-      <div className="card-image-container">
+    <div className={styles.card_container}>
+      <div className={styles.card_image_container}>
         <img src={outfitImage} alt="" />
       </div>
 
-      <div className="profile-container">
-        <div className="info-profile-container">
-          <div className="image-profile-container">
+      <div className={styles.profile_container}>
+        <div className={styles.info_profile_container}>
+          <div className={styles.image_profile_container}>
             <img src={profileImage} alt="" />
           </div>
 
-          <div className="more-info-profile-container">
-            <div className="name-date-profile-container">
+          <div className={styles.more_info_profile_container}>
+            <div className={styles.name_date_profile_container}>
               <h1>{nickName}</h1>
               <h2>{date}</h2>
             </div>
 
-            <div className="heartIcon">
+            <div className={styles.heartIcon}>
               <img src={heart} alt="" />
             </div>
           </div>
         </div>
 
-        <div className="all-clothes-container">
+        <div className={styles.all_clothes_container}>
           {clothes.map((clothe, index) => {
             return (
               <ClotheCard
@@ -49,7 +49,7 @@ function Card({ data }) {
               />
             )
           })}
-          <div className="full-clothes-price">
+          <div className={styles.full_clothes_price}>
             <h1>Total:</h1>
             <span>R${sum}</span>
           </div>

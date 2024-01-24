@@ -1,4 +1,4 @@
-.clothes-container {
+.clothes_container {
   display: flex;
   align-items: center;
   width: 100%;
@@ -8,7 +8,7 @@
 }
 
 
-.clothe-info-container {
+.clothe_info_container {
   display: block;
   line-height: 1;
   max-width: 170px;
@@ -17,18 +17,18 @@
   margin-right: 10px;
 }
 
-.clothe-image-container img {
+.clothe_image_container img {
   width: 64px;
   height: 64px;
   margin-right: 16px;
 }
 
-.brand-name-container {
+.brand_name_container {
   overflow: hidden;
   white-space: nowrap;
 }
 
-.brand-name-container h1 {
+.brand_name_container h1 {
   font-family: myFontFreeBold;
   font-size: 15px;
   text-overflow: ellipsis;
@@ -36,11 +36,11 @@
   white-space: nowrap;
 }
 
-.clothe-name-container {
+.clothe_name_container {
   margin-top: 6px;
 }
 
-.clothe-name-container h2 {
+.clothe_name_container h2 {
   font-family: myFontFreeLight;
   font-size: 15px;
   font-weight: 400;
@@ -50,11 +50,11 @@
   white-space: nowrap;
 }
 
-.price-container {
+.price_container {
   margin-top: 10px;
 }
 
-.price-container span {
+.price_container span {
   font-family: myFontFreeLight;
   font-size: 14px;
   font-weight: 700;
@@ -62,13 +62,13 @@
   color: #000;
 }
 
-.arrow-container img {
+.arrow_container img {
   width: 20px;
   height: 16px;
   object-fit: cover;
   opacity: 20%;
 }
 
-.separate-container {
+.separate_container {
   display: block;
 }

@@ -1,32 +1,32 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './ClotheCard.css'
+import styles from './ClotheCard.module.css'
 
 import arrow from '../../../../assets/images/arrow.png'
 
 function ClotheCard({ id, image, brand, clotheName, price }) {
   return (
-    <div className="clothes-container">
-      <div className="clothe-image-container">
+    <div className={styles.clothes_container}>
+      <div className={styles.clothe_image_container}>
         <img src={image} alt="" />
       </div>
 
-      <div className="clothe-info-container">
-        <div className="brand-name-container">
+      <div className={styles.clothe_info_container}>
+        <div className={styles.brand_name_container}>
           <h1>{brand}</h1>
         </div>
 
-        <div className="clothe-name-container">
+        <div className={styles.clothe_name_container}>
           <h2>{clotheName}</h2>
         </div>
 
-        <div className="price-container">
+        <div className={styles.price_container}>
           <span>R${price}</span>
         </div>
       </div>
 
-      <div className="arrow-container">
-        <Link to={`item/${id}`}>    
+      <div className={styles.arrow_container}>
+        <Link to={`item/${id}`}>
           <img src={arrow} alt="" />
         </Link>
       </div>
