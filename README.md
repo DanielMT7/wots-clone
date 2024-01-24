@@ -20,7 +20,7 @@ Eu iniciei o desenvolvimento desse site muito tempo atrás e ele acabou ficando 
 
 - Estrutura.
 - Roteamento.
-- Usar CSS modules para evitar conflito de classes.
+- Usar CSS modules para evitar conflito de classes. ✅
 - Fluxo de erro.
 - Simplificar algumas lógicas.
 - Separar a lógica dos componentes em Custom Hooks.
