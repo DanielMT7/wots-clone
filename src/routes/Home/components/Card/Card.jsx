@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ClotheCardList from '../ClotheCard/ClotheCardList'
+import ClotheCardList from '../ClotheCardList/ClotheCardList'
 import Slider from '../../../../components/Slider/Slider'
 
 import styles from './Card.module.css'
