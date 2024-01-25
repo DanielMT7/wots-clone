@@ -4,7 +4,7 @@ import App from './App.jsx'
 import Clothe from './routes/ClothePage/components/Clothe.jsx'
 import Home from './routes/Home/Home.jsx'
 import ErrorPage from './routes/ErrorPage/ErrorPage.jsx'
-import styles from './main.module.css'
+import './index.css'
 
 // 1 - Router Config
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
