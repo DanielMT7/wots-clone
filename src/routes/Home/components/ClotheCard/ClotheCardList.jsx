@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import styles from './ClotheCard.module.css'
+import styles from './ClotheCardList.module.css'
 
 import arrow from '../../../../assets/images/arrow.png'
 
-function ClotheCard({ id, image, brand, clotheName, price }) {
+function ClotheCardList({ id, image, brand, clotheName, price }) {
   return (
     <div className={styles.clothes_container}>
       <div className={styles.clothe_image_container}>
@@ -34,4 +34,4 @@ function ClotheCard({ id, image, brand, clotheName, price }) {
   )
 }
 
-export default ClotheCard
+export default ClotheCardList

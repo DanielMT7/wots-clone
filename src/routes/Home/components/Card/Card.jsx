@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ClotheCard from '../ClotheCard/ClotheCard'
+import ClotheCardList from '../ClotheCard/ClotheCardList'
 import Slider from '../../../../components/Slider/Slider'
 
 import styles from './Card.module.css'
@@ -41,7 +41,7 @@ function Card({ data }) {
         <div className={styles.all_clothes_container}>
           {clothes.map((clothe, index) => {
             return (
-              <ClotheCard
+              <ClotheCardList
                 key={index}
                 id={clothe.id}
                 image={clothe.image}
