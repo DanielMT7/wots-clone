@@ -2,6 +2,7 @@
 
 // Artista: Veigh
 import veigh from '../assets/images/Veigh/veigh.jpg'
+import veigh2 from '../assets/images/Veigh/veigh2.jpg'
 import veighProfile from '../assets/images/Veigh/veighProfile.jpg'
 import regata from '../assets/images/Veigh/regata.jpg'
 import invicta from '../assets/images/Veigh/invicta.jpg'
@@ -11,6 +12,7 @@ import calca from '../assets/images/Veigh/calca.avif'
 
 // Artista: Tokio DK
 import tokio from '../assets/images/TokioDK/tokiodk.avif'
+import tokio2 from '../assets/images/TokioDK/tokio2.jpg'
 import tokioProfile from '../assets/images/TokioDK/tokiodkProfile.avif'
 import tokioCap from '../assets/images/TokioDK/cap.avif'
 import tokioBag from '../assets/images/TokioDK/bag.avif'
@@ -20,6 +22,8 @@ import tokioPants from '../assets/images/TokioDK/pants.avif'
 
 // Artista: Derek
 import derek from '../assets/images/Derek/derek.avif'
+import derek2 from '../assets/images/Derek/derek2.jpg'
+import derek3 from '../assets/images/Derek/derek3.jpg'
 import derekProfile from '../assets/images/Derek/derekProfile.avif'
 import derekPants from '../assets/images/Derek/pants.avif'
 import derekSneaker from '../assets/images/Derek/sneaker.avif'
@@ -28,7 +32,7 @@ import derekJacket from '../assets/images/Derek/jacket.avif'
 
 const artists = [
   {
-    outfitImage: [veigh, derek, tokio],
+    outfitImage: [veigh, veigh2],
     profileImage: veighProfile,
     nickName: 'Veigh',
     date: 'October 1, 2023',
@@ -73,7 +77,7 @@ const artists = [
     ]
   },
   {
-    outfitImage: [tokio, veigh, derek],
+    outfitImage: [tokio, tokio2],
     profileImage: tokioProfile,
     nickName: 'Tokio DK',
     date: 'September 27, 2023',
@@ -116,7 +120,7 @@ const artists = [
     ]
   },
   {
-    outfitImage: [derek, veigh, tokio],
+    outfitImage: [derek, derek2, derek3],
     profileImage: derekProfile,
     nickName: 'Derek',
     date: 'September 23, 2023',

@@ -1,39 +1,14 @@
-import React, { useState } from 'react'
-import styles from './Card.module.css'
-import heart from '../../../../assets/images/coracao.png'
+import React from 'react'
+
 import ClotheCard from '../ClotheCard/ClotheCard'
-import arrow from '../../../../assets/images/arrow.png'
+import Slider from '../../../../components/Slider/Slider'
+
+import styles from './Card.module.css'
+
+import heart from '../../../../assets/images/coracao.png'
 
 function Card({ data }) {
-  // Seria interessante usar uma lib externa como o SWIPER para criar o slider de imagens.
-  // Seria interessante também fazer isso em um componente novo e reutilizar em outros lugares.
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const { outfitImage, profileImage, nickName, date, clothes } = data
-  const length = outfitImage.length
-
-  const handleNextImage = () => {
-    setCurrentImageIndex(
-      currentImageIndex < length - 1 ? currentImageIndex + 1 : currentImageIndex
-    )
-  }
-
-  const handlePreviousImage = () => {
-    setCurrentImageIndex(
-      currentImageIndex > 0 ? currentImageIndex - 1 : currentImageIndex
-    )
-  }
-
-  const pagination = () => {
-    return outfitImage.map((_, index) => (
-      <div
-        key={index}
-        className={`${styles.image_bullet} ${
-          index === currentImageIndex ? styles.active_bullet : ''
-        }`}
-        onClick={() => setCurrentImageIndex(index)}
-      ></div>
-    ))
-  }
 
   let sum = clothes.reduce((accumulator, object) => {
     return accumulator + object.price
@@ -42,24 +17,7 @@ function Card({ data }) {
   return (
     <div className={styles.card_container}>
       <div className={styles.card_image_container}>
-        <img
-          className={styles.main_image}
-          src={outfitImage?.[currentImageIndex]}
-          alt="outfit image"
-        />
-        <div className={styles.image_bullets}>{pagination()}</div>
-        <img
-          className={`${styles.arrow} ${styles.previous_arrow}`}
-          src={arrow}
-          alt="left arrow"
-          onClick={handlePreviousImage}
-        />
-        <img
-          className={`${styles.arrow} ${styles.next_arrow}`}
-          src={arrow}
-          alt="right arrow"
-          onClick={handleNextImage}
-        />
+        <Slider images={outfitImage} />
       </div>
 
       <div className={styles.profile_container}>
