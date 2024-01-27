@@ -48,7 +48,7 @@
   height: 150px;
 }
 
-button {
+.leftArrow .rightArrow  button {
   height: 50px;
   background-color: transparent;
   opacity: 0.3;
