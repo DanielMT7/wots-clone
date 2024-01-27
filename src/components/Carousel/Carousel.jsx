@@ -27,10 +27,10 @@ function Carousel({ data }) {
         <img src={arrow} alt="" />
       </button>
       <div className={styles.carousel} ref={carousel}>
-        {clothes.map(clothe => {
+        {clothes.map((clothe, id) => {
           const { image, price, brand } = clothe
           return (
-            <div className={styles.info}>
+            <div key={id} className={styles.info}>
               <img className={styles.item} src={image} />
               <h1>{brand}</h1>
               <span>R${price}</span>
