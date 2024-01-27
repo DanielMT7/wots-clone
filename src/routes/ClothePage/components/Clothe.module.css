@@ -78,6 +78,7 @@
   background-color: #000;
   color: white;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .clothe_card_container_info_heart img{
