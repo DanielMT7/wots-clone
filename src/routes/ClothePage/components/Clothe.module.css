@@ -2,12 +2,15 @@
   height: 100vh;
   display: grid;
   place-content: center;
+  padding: 94px 24px 12px;
 }
 
 .clothe_card_container {
   background-color: #fff;
-  width: 600px;
-  height: 405px;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  max-height: 405px;
   display: flex;
   border-radius: 20px;
   box-shadow: 0 1.47px 11.04px rgba(0,0,0,.2)!important;
@@ -18,8 +21,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
-  height: 405px;
+  width: 100%;
+  height: 100%;
 }
 
 .clothe_card_container_image img {
@@ -29,8 +32,13 @@
   box-shadow: 0 0 0 1px rgba(0,0,0,.2)!important;
 }
 
+.clothe_card_container_all_info {
+  width: 100%;
+  height: 100%;
+}
+
 .clothe_card_container_info {
-  width: 300px;
+  width: 100%;
   height: 60px;
   padding: 12px 24px;
   
@@ -58,6 +66,7 @@
 .clothe_card_container_price_info {
   font-family: myFontLight;
   padding: 10px 20px;
+  width: 100%;
   height: 345px;
 }
 
@@ -66,15 +75,21 @@
   color: #7a7a7a;
 }
 
+.display_container {
+  width: 100%;
+}
+
 .button_container {
-  text-align: center;
+  width: 100%;
+  height: 36px;
   margin-top: 20px;
 }
 
 .price_button {
   padding: 0 16px;
-  width: 260px;
-  height: 36px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
   background-color: #000;
   color: white;
   border-radius: 4px;
@@ -85,4 +100,29 @@
   width: 18px;
   height: 18px;
   object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .clothe_card_container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .clothe_card_container_image {
+    width: 100%;
+    height: 70%;
+  }
+
+  .clothe_card_container_all_info {
+    width: 100%;
+    height: auto;
+  }
+
+  .clothe_card_container_price_info {
+    width: 100%;
+    height: 100%;
+  }
 }

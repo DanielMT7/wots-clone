@@ -51,13 +51,11 @@ function Clothe() {
 
         <div className={styles.clothe_card_container_all_info}>
           <div className={styles.clothe_card_container_info}>
-            <div className="">
-              <h1>{brand}</h1>
-              <h2>{clotheName}</h2>
-            </div>
+            <h1>{brand}</h1>
+            <h2>{clotheName}</h2>
           </div>
           <div className={styles.clothe_card_container_price_info}>
-            <div>
+            <div className={styles.display_container}>
               ${price}{' '}
               {buyAt ? <span>{`from ${formatSiteName(buyAt)}`}</span> : null}
             </div>
