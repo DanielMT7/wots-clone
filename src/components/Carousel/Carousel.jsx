@@ -19,8 +19,6 @@ function Carousel({ data }) {
     carousel.current.scrollLeft += carousel.current.offsetWidth
   }
 
-  console.log(clothes)
-
   return (
     <div className={styles.container_carousel}>
       <button className={styles.leftArrow} onClick={handleLeftClick}>
