@@ -4,9 +4,12 @@ import styles from './Navbar.module.css'
 import search from '../../assets/images/search.svg'
 import menu from '../../assets/images/menu.png'
 import Menu from '../Menu/Menu'
+import Search from '../Search/Search'
 
 function Navbar() {
+  // Sinto que estou repetindo muito código aqui, preciso procurar uma maneira de otimizar esse código
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isSearchBarOpen, setIsSearchBarOpen] = useState(false)
 
   const handleOpenMenu = () => {
     setIsMenuOpen(true)
@@ -14,6 +17,14 @@ function Navbar() {
 
   const handleCloseMenu = () => {
     setIsMenuOpen(false)
+  }
+
+  const handleOpenSearchBar = () => {
+    setIsSearchBarOpen(true)
+  }
+
+  const handleCloseSearchBar = () => {
+    setIsSearchBarOpen(false)
   }
 
   return (
@@ -36,7 +47,21 @@ function Navbar() {
           </Link>
         </li>
         <li>
-          <img src={search} alt="Barra de pesquisa" />
+          {isSearchBarOpen ? (
+            <button
+              className={styles.menu_button}
+              onClick={handleCloseSearchBar}
+            >
+              <img src={search} alt="" />
+            </button>
+          ) : (
+            <button
+              className={styles.menu_button}
+              onClick={handleOpenSearchBar}
+            >
+              <img src={search} alt="" />
+            </button>
+          )}
         </li>
       </ul>
 
@@ -44,6 +69,11 @@ function Navbar() {
         <div className={styles.overlay} onClick={handleCloseMenu}></div>
       )}
       {isMenuOpen && <Menu />}
+
+      {isSearchBarOpen && (
+        <div className={styles.overlay} onClick={handleCloseSearchBar}></div>
+      )}
+      {isSearchBarOpen && <Search />}
     </nav>
   )
 }
