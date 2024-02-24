@@ -7,39 +7,34 @@ import Menu from '../Menu/Menu'
 import Search from '../Search/Search'
 
 function Navbar() {
-  // Sinto que estou repetindo muito código aqui, preciso procurar uma maneira de otimizar esse código
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isSearchBarOpen, setIsSearchBarOpen] = useState(false)
+  const [openMenu, setOpenMenu] = useState(null)
 
-  const handleOpenMenu = () => {
-    setIsMenuOpen(true)
+  const handleToggleMenu = menuType => {
+    setOpenMenu(prevMenu => (prevMenu === menuType ? null : menuType))
   }
 
   const handleCloseMenu = () => {
-    setIsMenuOpen(false)
+    setOpenMenu(null)
   }
 
-  const handleOpenSearchBar = () => {
-    setIsSearchBarOpen(true)
-  }
-
-  const handleCloseSearchBar = () => {
-    setIsSearchBarOpen(false)
+  function NavbarButton({ onClick, image, alt }) {
+    return (
+      <button className={styles.menu_button} onClick={onClick}>
+        <img src={image} alt={alt} />
+      </button>
+    )
   }
 
   return (
     <nav className={styles.navbar_container}>
       <ul className={styles.navbar_list}>
         <li>
-          {isMenuOpen ? (
-            <button className={styles.menu_button} onClick={handleCloseMenu}>
-              <img src={menu} alt="Menu" />
-            </button>
-          ) : (
-            <button className={styles.menu_button} onClick={handleOpenMenu}>
-              <img src={menu} alt="Menu" />
-            </button>
-          )}
+          <NavbarButton
+            onClick={() => handleToggleMenu('menu')}
+            isOpen={openMenu === 'menu'}
+            image={menu}
+            alt="Menu"
+          />
         </li>
         <li>
           <Link to="/">
@@ -47,33 +42,21 @@ function Navbar() {
           </Link>
         </li>
         <li>
-          {isSearchBarOpen ? (
-            <button
-              className={styles.menu_button}
-              onClick={handleCloseSearchBar}
-            >
-              <img src={search} alt="" />
-            </button>
-          ) : (
-            <button
-              className={styles.menu_button}
-              onClick={handleOpenSearchBar}
-            >
-              <img src={search} alt="" />
-            </button>
-          )}
+          <NavbarButton
+            onClick={() => handleToggleMenu('search')}
+            isOpen={openMenu === 'search'}
+            image={search}
+            alt=""
+          />
         </li>
       </ul>
 
-      {isMenuOpen && (
+      {openMenu && (
         <div className={styles.overlay} onClick={handleCloseMenu}></div>
       )}
-      {isMenuOpen && <Menu />}
 
-      {isSearchBarOpen && (
-        <div className={styles.overlay} onClick={handleCloseSearchBar}></div>
-      )}
-      {isSearchBarOpen && <Search />}
+      {openMenu === 'menu' && <Menu />}
+      {openMenu === 'search' && <Search />}
     </nav>
   )
 }
