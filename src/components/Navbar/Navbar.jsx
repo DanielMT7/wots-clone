@@ -17,7 +17,7 @@ function Navbar() {
     setOpenMenu(null)
   }
 
-  function NavbarButton({ onClick, image, alt }) {
+  const NavbarButton = ({ onClick, image, alt }) => {
     return (
       <button className={styles.menu_button} onClick={onClick}>
         <img src={image} alt={alt} />
@@ -31,7 +31,6 @@ function Navbar() {
         <li>
           <NavbarButton
             onClick={() => handleToggleMenu('menu')}
-            isOpen={openMenu === 'menu'}
             image={menu}
             alt="Menu"
           />
@@ -44,7 +43,6 @@ function Navbar() {
         <li>
           <NavbarButton
             onClick={() => handleToggleMenu('search')}
-            isOpen={openMenu === 'search'}
             image={search}
             alt=""
           />
