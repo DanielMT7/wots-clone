@@ -26,7 +26,7 @@ function ClotheCardList({ id, image, brand, clotheName, price }) {
       </div>
 
       <div className={styles.arrow_container}>
-        <Link to={`item/${id}`}>
+        <Link to={`/item/${id}`}>
           <img src={arrow} alt="" />
         </Link>
       </div>
