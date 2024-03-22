@@ -35,6 +35,7 @@ const artists = [
     outfitImage: [veigh, veigh2],
     profileImage: veighProfile,
     nickName: 'Veigh',
+    id_name: 'veigh',
     date: 'October 1, 2023',
     clothes: [
       {
@@ -80,6 +81,7 @@ const artists = [
     outfitImage: [tokio, tokio2],
     profileImage: tokioProfile,
     nickName: 'Tokio DK',
+    id_name: 'tokio_dk',
     date: 'September 27, 2023',
     clothes: [
       {
@@ -123,6 +125,7 @@ const artists = [
     outfitImage: [derek, derek2, derek3],
     profileImage: derekProfile,
     nickName: 'Derek',
+    id_name: 'derek',
     date: 'September 23, 2023',
     clothes: [
       {
