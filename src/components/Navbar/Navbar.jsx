@@ -54,7 +54,7 @@ function Navbar() {
       )}
 
       {openMenu === 'menu' && <Menu />}
-      {openMenu === 'search' && <Search />}
+      {openMenu === 'search' && <Search handleCloseMenu={handleCloseMenu} />}
     </nav>
   )
 }
