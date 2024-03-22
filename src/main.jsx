@@ -1,13 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+
 import App from './App.jsx'
 import Clothe from './routes/ClothePage/components/Clothe.jsx'
-import Home from './routes/Home/Home.jsx'
 import ErrorPage from './routes/ErrorPage/ErrorPage.jsx'
-import './index.css'
+import Artist from './routes/ArtistPage/components/Artist.jsx'
+import CardList from './routes/Home/CardList.jsx'
 
-// 1 - Router Config
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+import './index.css'
 
 const router = createBrowserRouter([
   {
@@ -17,12 +19,17 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home />
+        element: <CardList />
       },
       // nested routes
       {
         path: '/item/:id',
         element: <Clothe />
+      },
+
+      {
+        path: '/artist/:id',
+        element: <Artist />
       }
     ]
   }
